@@ -2,28 +2,28 @@
   <div>
     <v-sheet
       color="secondary"
-      height="95px"
+      height="120px"
       class="d-flex align-center elevation-1 fixed"
     >
-      <v-container class="py-0">
+      <v-container class="pa-lg-0">
         <div class="d-flex justify-space-between align-center">
           <router-link to="#home">
             <img
-              src="/img/bikeweb.svg"
+              src="/img/logo.svg"
               alt="Top Tintas"
               title="Top Tintas"
               class="d-block contain"
-              height="45px"
+              height="50.25px"
             />
           </router-link>
           <div class="ml-auto">
             <div
               v-for="({ name, link }, key) in menu"
               :key="key"
-              class="d-inline-flex"
+              class="d-inline-flex nav"
             >
               <v-btn
-                class="text-none px-2 px-lg-4 py-2 nav-link white--text text--darken-1"
+                class="text-none mx-lg-8 mx-3 py-2 nav-link white--text text--darken-1 text-lg-h5 text-body-2"
                 v-if="link"
                 :to="link"
                 tile
@@ -43,16 +43,12 @@
 
 <script>
 export default {
-  props: {},
-  data: () => ({
-    time: "",
-    menu: [
-      { name: "Home", link: "#home" },
-      { name: "Sobre", link: "#about" },
-      { name: "Categorias", link: "#categories" },
-      { name: "Galeria", link: "#gallery" },
-    ],
-  }),
+  props: {
+    menu: {
+      type: Array,
+      default: () => [],
+    },
+  },
   computed: {},
 };
 </script>
@@ -64,6 +60,15 @@ export default {
 
 .v-btn--active .v-btn__content {
   color: #abdf3a !important;
+}
+.nav:nth-child(4) a {
+  color: #121717 !important;
+  font-weight: 700;
+  width: 172px !important;
+  height: 58px !important;
+  margin-left: 52px;
+  margin-right: 0 !important;
+  background-color: #ffffff;
 }
 /* .v-btn--active:after {
   content: "";
