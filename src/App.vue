@@ -17,9 +17,10 @@ export default {
 };
 </script>
 <style>
-* {
-  font-family: "Red Hat Display", sans-serif;
+.Kaushan-Script {
+  font-family: "Kaushan Script", cursive;
 }
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1194px !important;

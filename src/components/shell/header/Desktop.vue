@@ -1,17 +1,18 @@
 <template>
   <div>
     <v-sheet
-      color="secondary"
+      id="header"
+      color="transparent"
       height="120px"
-      class="d-flex align-center elevation-1 fixed"
+      class="d-flex align-center fixed"
     >
       <v-container class="pa-lg-0">
         <div class="d-flex justify-space-between align-center">
           <router-link to="#home">
             <img
               src="/img/logo.svg"
-              alt="Top Tintas"
-              title="Top Tintas"
+              alt="Logo"
+              title="Logo"
               class="d-block contain"
               height="50.25px"
             />
@@ -50,10 +51,31 @@ export default {
     },
   },
   computed: {},
+  mounted() {
+    document.addEventListener("scroll", this.onscroll);
+  },
+  methods: {
+    onscroll() {
+      if (document.documentElement.scrollTop > 120) {
+        document.getElementById("header").className =
+          "secondary d-flex align-center fixed elevation-2";
+      } else {
+        document.getElementById("header").className =
+          "d-flex align-center fixed";
+      }
+    },
+  },
 };
 </script>
 
 <style>
+#header {
+  transition: all 0.15s;
+}
+.fixed {
+  position: relative;
+  z-index: 99999;
+}
 .nav-link::before {
   opacity: 0 !important;
 }

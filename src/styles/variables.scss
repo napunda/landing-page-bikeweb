@@ -1,14 +1,19 @@
 $body-font-family:'Red Hat Display', sans-serif;
 $headings: (
   'body-1': (
-    'size': 18px,
-    'line-height': 20px,
+    'size': 16px,
+    'line-height': 21px,
     'weight': 400,
   ),
   'body-2': (
     'size': 16px,
     'line-height': 24px,
     'weight': 400,
+  ),
+  'h1': (
+    'size': 80px,
+    'weight': 700,
+    'line-height': 60px,
   ),
   'h2': (
     'size': 54px,
@@ -19,8 +24,9 @@ $headings: (
     'line-height': 48px,
   ),
   'h4': (
-    'size': 28px,
-    'line-height': 33px,
+    'size': 32px,
+    'line-height': 42px,
+    'weight': 700,
   ),
   'h5': (
     'size': 20px,
