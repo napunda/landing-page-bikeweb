@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div id="home" class="hero">
     <v-container>
       <v-row class="relative" align="center">
         <v-col class="d-flex flex-column white--text" lg="6" cols="12"
@@ -56,7 +56,7 @@ export default {};
 .outline-text {
   color: transparent !important;
   font-weight: 900 !important;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.7px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 .hero {

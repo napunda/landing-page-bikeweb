@@ -3,6 +3,7 @@
     <Hero />
     <Brands />
     <About />
+    <Categories />
   </v-sheet>
 </template>
 
@@ -10,8 +11,9 @@
 import Hero from "./Hero.vue";
 import Brands from "./Brands.vue";
 import About from "./About.vue";
+import Categories from "./Categories.vue";
 export default {
-  components: { Hero, Brands, About },
+  components: { Hero, Brands, About, Categories },
 };
 </script>
 <style scoped>

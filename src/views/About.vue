@@ -1,11 +1,46 @@
 <template>
-  <v-container class="mt-16">
-    <div class="d-flex justify-center flex-column align-center">
+  <v-container class="mt-16 pb-16">
+    <div id="about" class="d-flex justify-center flex-column align-center">
       <SubTitle>Sobre nós</SubTitle>
-      <div class="text-h4 white--text mt-5">
+      <div class="text-h4 white--text mt-5 text-center mb-16">
         <span class="outline-text">QUEM SOMOS</span> E CONSTRUIMOS
       </div>
     </div>
+    <div class="d-flex justify-center mt-9">
+      <img class="d-block" width="70%" src="/img/logo-about.svg" alt="Logo" />
+    </div>
+    <v-row>
+      <v-col
+        class="white--text d-flex flex-column align-center text-center"
+        cols="4"
+      >
+        <div class="text-lg-h6 mt-5 mb-2">TECNOLOGIA</div>
+        <div class="text-body-1">
+          A inovação que traz confiava e conforto também preza pelos comodidade
+          na hora de comprar.
+        </div>
+      </v-col>
+      <v-col
+        class="white--text d-flex flex-column align-center text-center"
+        cols="4"
+      >
+        <div class="text-lg-h6 mt-5 mb-2">INOVAÇÃO</div>
+        <div class="text-body-1">
+          Amostra de produtos ainda poucos conhecidos no mercado, porém com alta
+          confibilidade.
+        </div>
+      </v-col>
+      <v-col
+        class="white--text d-flex flex-column align-center text-center"
+        cols="4"
+      >
+        <div class="text-lg-h6 mt-5 mb-2">COMODIDADE</div>
+        <div class="text-body-1">
+          A inovação que traz confiava e conforto também preza pelos comodidade
+          na hora de comprar.
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

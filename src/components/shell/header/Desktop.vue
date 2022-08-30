@@ -24,9 +24,10 @@
               class="d-inline-flex nav"
             >
               <v-btn
+                target="_self"
                 class="text-none mx-lg-8 mx-3 py-2 nav-link white--text text--darken-1 text-lg-h5 text-body-2"
                 v-if="link"
-                :to="link"
+                :to="{ name: name, hash: link }"
                 tile
                 depressed
                 text
