@@ -10,7 +10,9 @@
           <span class="outline-text">CONHEÇA</span> NOSSA LINHA
         </div>
       </div>
-      <div class="category-container justify-lg-space-between justify-center">
+      <div
+        class="category-container justify-lg-space-between justify-center mt-9"
+      >
         <div
           class="content d-flex white--text"
           v-for="({ icon, title, text }, key) in categories"
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-import SubTitle from "../components/SubTitle.vue";
+import SubTitle from "../../components/SubTitle.vue";
 export default {
   data: () => ({
     categories: [

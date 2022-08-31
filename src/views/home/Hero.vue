@@ -3,7 +3,9 @@
     <v-container>
       <v-row class="relative" align="center">
         <v-col class="d-flex flex-column white--text" lg="6" cols="12"
-          ><div class="text-h2"><span class="outline-text">PEDALE</span></div>
+          ><div class="text-h2">
+            <span class="outline-text">PEDALE</span>
+          </div>
           <div class="text-h1 mt-12">SUPER BIKES</div>
           <div class="text-body-1 w-60 mt-12">
             Pedalar nunca foi tão fácil e prazeroso. Transforme sua rotina
@@ -11,7 +13,7 @@
           </div>
           <div>
             <v-btn
-              href="#portfolio"
+              @click="$vuetify.goTo('#portfolio', { offset: 300 })"
               height="58px"
               width="172px"
               class="secondary--text text-none text-body-2 font-weight-bold mt-12"

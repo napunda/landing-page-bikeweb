@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import SubTitle from "../components/SubTitle.vue";
+import SubTitle from "../../components/SubTitle.vue";
 export default { components: { SubTitle } };
 </script>
 

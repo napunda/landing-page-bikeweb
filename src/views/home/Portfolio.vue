@@ -1,0 +1,93 @@
+<template>
+  <v-container class="px-lg-0 px-md-0 mt-16 pt-16">
+    <div
+      id="portfolio"
+      class="d-flex justify-center flex-column align-center mt-5"
+    >
+      <SubTitle>Portfólio</SubTitle>
+      <div class="text-h4 white--text mt-5 text-center mb-16">
+        <span class="outline-text">VIVA</span> NOSSAS HISTÓRIAS
+      </div>
+    </div>
+    <div class="portfolio mt-9">
+      <div class="item" v-for="(item, key) in thumbs" :key="key">
+        <a
+          class="text-decoration-none"
+          href="javascript:void(0);"
+          @click="
+            images = images;
+            index = 0;
+          "
+        >
+          <img width="100%" :src="item.url" v-if="item.url" class="d-block" />
+        </a>
+      </div>
+      <LightGallery
+        interfaceColor="#ABDF3A"
+        :images="images"
+        :index="index"
+        :disable-scroll="true"
+        @close="index = null"
+      />
+    </div>
+  </v-container>
+</template>
+
+<script>
+import { LightGallery } from "vue-light-gallery";
+import SubTitle from "../../components/SubTitle.vue";
+
+export default {
+  components: {
+    SubTitle,
+    LightGallery,
+  },
+  data() {
+    return {
+      thumbs: [
+        { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
+        { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
+        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
+      ],
+      images: [
+        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
+        { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
+        { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
+        { title: "Capacete", url: "/img/portfolio/bike-helmet.jpg" },
+        { title: "Catraca", url: "/img/portfolio/bike-wheel.jpg" },
+        { title: "Trilha", url: "/img/portfolio/bike-downhill.png" },
+      ],
+      index: null,
+    };
+  },
+};
+</script>
+
+<style>
+.portfolio {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 30px;
+}
+.item {
+  height: 330px;
+  flex: 1 1 500px;
+}
+.item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.light-gallery__close,
+.light-gallery__next,
+.light-gallery__prev {
+  opacity: 0.8;
+  background-color: #abdf3a !important;
+  color: #121717 !important;
+}
+.light-gallery__close g,
+.light-gallery__next polyline,
+.light-gallery__prev polyline {
+  stroke: #121717 !important;
+}
+</style>

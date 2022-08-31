@@ -1,4 +1,4 @@
-# landing
+# landig-page
 
 ## Project setup
 ```

@@ -8,7 +8,7 @@
     >
       <v-container class="pa-lg-0">
         <div class="d-flex justify-space-between align-center">
-          <router-link to="#home">
+          <a @click="$vuetify.goTo('#home', { offset: 300 })">
             <img
               src="/img/logo.svg"
               alt="Logo"
@@ -16,7 +16,8 @@
               class="d-block contain"
               height="50.25px"
             />
-          </router-link>
+          </a>
+
           <div class="ml-auto">
             <div
               v-for="({ name, link }, key) in menu"
@@ -27,7 +28,7 @@
                 target="_self"
                 class="text-none mx-lg-8 mx-3 py-2 nav-link white--text text--darken-1 text-lg-h5 text-body-2"
                 v-if="link"
-                :to="{ name: name, hash: link }"
+                @click="$vuetify.goTo(link, { offset: 200 })"
                 tile
                 depressed
                 text
@@ -84,7 +85,7 @@ export default {
 .v-btn--active .v-btn__content {
   color: #abdf3a !important;
 }
-.nav:nth-child(4) a {
+.nav:nth-child(4) button {
   color: #121717 !important;
   font-weight: 700;
   width: 172px !important;
