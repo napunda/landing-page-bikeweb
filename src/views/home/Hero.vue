@@ -1,6 +1,6 @@
 <template>
   <div id="home" class="hero">
-    <v-container>
+    <v-container v-if="!smAndDown">
       <v-row class="relative" align="center">
         <v-col class="d-flex flex-column white--text" lg="6" cols="12"
           ><div class="text-h2">
@@ -28,11 +28,18 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container v-else></v-container>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    smAndDown() {
+      return this.$vuetify.breakpoint.smAndDown;
+    },
+  },
+};
 </script>
 
 <style>

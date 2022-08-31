@@ -14,7 +14,7 @@
         class="white--text d-flex flex-column align-center text-center"
         cols="4"
       >
-        <div class="text-lg-h6 mt-5 mb-2">TECNOLOGIA</div>
+        <div id="technology" class="text-lg-h6 mt-5 mb-2">TECNOLOGIA</div>
         <div class="text-body-1">
           A inovação que traz confiava e conforto também preza pelos comodidade
           na hora de comprar.
@@ -24,7 +24,7 @@
         class="white--text d-flex flex-column align-center text-center"
         cols="4"
       >
-        <div class="text-lg-h6 mt-5 mb-2">INOVAÇÃO</div>
+        <div id="innovation" class="text-lg-h6 mt-5 mb-2">INOVAÇÃO</div>
         <div class="text-body-1">
           Amostra de produtos ainda poucos conhecidos no mercado, porém com alta
           confibilidade.
@@ -34,7 +34,7 @@
         class="white--text d-flex flex-column align-center text-center"
         cols="4"
       >
-        <div class="text-lg-h6 mt-5 mb-2">COMODIDADE</div>
+        <div id="convenience" class="text-lg-h6 mt-5 mb-2">COMODIDADE</div>
         <div class="text-body-1">
           A inovação que traz confiava e conforto também preza pelos comodidade
           na hora de comprar.

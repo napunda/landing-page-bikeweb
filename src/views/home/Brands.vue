@@ -1,5 +1,5 @@
 <template>
-  <v-sheet color="transparent" class="brands mt-6">
+  <v-sheet id="brands" color="transparent" class="brands mt-6">
     <v-container>
       <hooper ref="customersCarousel" :settings="hooperSettings">
         <slide v-for="({ src, name }, key) in brands" :key="key">

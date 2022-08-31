@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div id="top" class="header">
     <Desktop v-if="!smAndDown" :menu="menu" />
     <Mobile v-if="smAndDown" :menu="menu" />
   </div>

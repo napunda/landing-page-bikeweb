@@ -1,9 +1,9 @@
 <template>
-  <v-sheet color="transparent" class="mt-150 pb-6">
-    <v-container class="pa-0">
+  <v-sheet color="transparent" class="mt-150 pb-6 footer">
+    <v-container class="pa-lg-0">
       <footer>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" lg="0" md="6">
             <img height="50px" class="d-block" src="/img/logo.svg" alt="" />
             <div class="white--text text-body-1 mt-5 mb-5 caption-news-letter">
               Mantenha-se informado sobre lançamentos.
@@ -18,7 +18,7 @@
                 dense
                 height="50px"
                 label="Seu e-mail"
-                single-line="true"
+                single-line
               ></v-text-field>
               <v-btn
                 height="50px"
@@ -28,7 +28,7 @@
               >
             </div>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" lg="0" md="6">
             <v-row>
               <v-col
                 v-for="({ title, menus }, key) in menuFooter"
@@ -41,25 +41,23 @@
                 >
                   <v-btn
                     class="white--text text-none text-body-1 text-opacity-60"
-                    v-for="(item, i) in menus"
-                    :key="i"
+                    v-for="({ title, link }, key) in menus"
+                    :key="key"
                     text
-                    @click="$vuetify.goTo(item.link, { offset: 0 })"
+                    @click="$vuetify.goTo(link, { offset: 120 })"
                   >
-                    {{ item.title }}
+                    {{ title }}
                   </v-btn>
                 </div>
               </v-col>
             </v-row>
           </v-col>
         </v-row>
-        <div
-          class="d-flex justify-space-between align-center white--text mt-16 pt-9"
-        >
+        <div class="copy white--text mt-16 pt-9">
           <div class="text-body-1 text-opacity-60">
             BikeWeb 2012 - Todos os direitos reservados.
           </div>
-          <div class="d-flex">
+          <div class="d-flex justify-center">
             <v-btn
               target="_blank"
               href="https://facebook.com"
@@ -107,16 +105,28 @@ export default {
       {
         title: "SOBRE",
         menus: [
-          { title: "Tecnologia", link: "#sobre" },
-          { title: "Inovação", link: "#sobre" },
-          { title: "Comodidade", link: "#sobre" },
+          { title: "Tecnologia", link: "#about" },
+          { title: "Inovação", link: "#about" },
+          { title: "Comodidade", link: "#about" },
         ],
       },
       {
         title: "CATEGORIAS",
-        menus: ["Passeio", "Esporte", "Lazer", "Trabalho"],
+        menus: [
+          { title: "Passeio", link: "#categories" },
+          { title: "Esporte", link: "#categories" },
+          { title: "Lazer", link: "#categories" },
+          { title: "Trabalho", link: "#categories" },
+        ],
       },
-      { title: "MENU RÁPIDO", menus: ["Topo", "Marcas", "Galeria"] },
+      {
+        title: "MENU RÁPIDO",
+        menus: [
+          { title: "Topo", link: "#top" },
+          { title: "Marcas", link: "#brands" },
+          { title: "Galeria", link: "#portfolio" },
+        ],
+      },
     ],
   }),
 };
@@ -130,6 +140,7 @@ export default {
   opacity: 0.6 !important;
 }
 .links-footer .v-btn {
+  border-radius: 0px;
   padding: 0 !important;
   min-width: 100% !important;
   justify-content: flex-start;
@@ -159,7 +170,26 @@ export default {
 .news-letter {
   width: 71%;
 }
+@media (max-width: 960px) {
+  .news-letter,
+  .caption-news-letter {
+    width: 100% !important;
+  }
+}
 .caption-news-letter {
   width: 35%;
+}
+.copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .copy {
+    width: 100% !important;
+    justify-content: center;
+  }
 }
 </style>
