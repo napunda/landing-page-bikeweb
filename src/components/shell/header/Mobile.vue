@@ -15,7 +15,7 @@
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer class="primary" v-model="drawer" fixed temporary>
+    <v-navigation-drawer class="blur" v-model="drawer" fixed temporary>
       <div class="px-8 py-6 d-flex flex-column">
         <router-link to="/" class="d-flex">
           <img
@@ -30,7 +30,12 @@
       <v-list-item-group v-model="current">
         <v-list>
           <div v-for="({ name, link }, i) in menu" :key="i">
-            <v-list-item v-if="link" :to="link" link>
+            <v-list-item
+              @click="$vuetify.goTo(link, { offset: 200 })"
+              v-if="link"
+              :to="link"
+              link
+            >
               <v-list-item-content>
                 <v-list-item-title
                   class="white--text text-body-2 font-weight-medium nav-link"
@@ -93,5 +98,8 @@ export default {
 .v-list-item__icon .v-icon {
   color: #ffffff !important;
   font-size: 14px !important;
+}
+.blur {
+  background-color: #121717e7 !important;
 }
 </style>

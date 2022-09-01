@@ -1,11 +1,13 @@
 <template>
-  <v-container class="px-lg-0 px-md-0 mt-16 pt-16">
+  <v-container
+    class="px-lg-0 px-md-0 mt-lg-16 mt-md-16 mt-5 pt-lg-16 pt-md-16 pt-6"
+  >
     <div
       id="portfolio"
       class="d-flex justify-center flex-column align-center mt-5"
     >
       <SubTitle>Portfólio</SubTitle>
-      <div class="text-h4 white--text mt-5 text-center mb-16">
+      <div class="text-h4 white--text mt-5 text-center mb-lg-16 mb-md-16 mb-5">
         <span class="outline-text">VIVA</span> NOSSAS HISTÓRIAS
       </div>
     </div>
@@ -50,7 +52,7 @@ export default {
         { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
       ],
       images: [
-        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
+        { title: "Corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
         { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
         { title: "Capacete", url: "/img/portfolio/bike-helmet.jpg" },

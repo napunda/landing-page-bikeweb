@@ -1,12 +1,14 @@
 <template>
-  <div class="mt-16 pt-6 d-flex justify-center">
-    <v-container class="pa-0 ma-0">
+  <div class="mt-lg-16 mt-md-16 mt-5 pt-6 d-flex justify-center">
+    <v-container class="pa-lg-0 ma-lg-0 pa-md-0 ma-md-0">
       <div
         id="categories"
         class="d-flex justify-center flex-column align-center"
       >
         <SubTitle>Categorias</SubTitle>
-        <div class="text-h4 white--text mt-5 text-center mb-16">
+        <div
+          class="text-h4 white--text mt-5 text-center mb-lg-16 mb-md-16 mb-5"
+        >
           <span class="outline-text">CONHEÇA</span> NOSSA LINHA
         </div>
       </div>
@@ -94,6 +96,12 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   transition: all ease-in-out 0.5s;
+}
+@media (max-width: 580px) {
+  .content {
+    width: 80% !important;
+    max-height: none !important;
+  }
 }
 .content:hover {
   background-color: #799e29;

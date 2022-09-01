@@ -35,4 +35,9 @@ export default {
   padding-top: 120px;
   height: 100%;
 }
+@media (max-width: 1000px) {
+  .home {
+    padding-top: 50px;
+  }
+}
 </style>

@@ -17,7 +17,6 @@
               height="50.25px"
             />
           </a>
-
           <div class="ml-auto">
             <div
               v-for="({ name, link }, key) in menu"
@@ -25,13 +24,14 @@
               class="d-inline-flex nav"
             >
               <v-btn
+                @click="$vuetify.goTo(link, { offset: 200 })"
                 target="_self"
                 class="text-none mx-lg-8 mx-3 py-2 nav-link white--text text--darken-1 text-lg-h5 text-body-2"
                 v-if="link"
-                @click="$vuetify.goTo(link, { offset: 200 })"
                 tile
                 depressed
                 text
+                :to="link"
                 active-class="secondary--text"
               >
                 {{ name }}
@@ -85,7 +85,7 @@ export default {
 .v-btn--active .v-btn__content {
   color: #abdf3a !important;
 }
-.nav:nth-child(4) button {
+.nav:nth-child(4) a {
   color: #121717 !important;
   font-weight: 700;
   width: 172px !important;

@@ -21,9 +21,21 @@ export default {
       infiniteScroll: true,
       wheelControl: false,
       autoPlay: false,
-      playSpeed: 4000,
-      itemsToShow: 4,
       itemsToSlide: 1,
+      breakpoints: {
+        0: {
+          itemsToShow: 2,
+        },
+        600: {
+          itemsToShow: 2,
+        },
+        800: {
+          itemsToShow: 3,
+        },
+        1000: {
+          itemsToShow: 4,
+        },
+      },
     },
     brands: [
       { src: "/img/caloi.png", name: "Caloi" },

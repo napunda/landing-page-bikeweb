@@ -8,7 +8,7 @@
             <div class="white--text text-body-1 mt-5 mb-5 caption-news-letter">
               Mantenha-se informado sobre lançamentos.
             </div>
-            <div class="d-flex news-letter">
+            <div class="d-flex news-letter my-6">
               <v-text-field
                 light
                 hide-details
@@ -35,7 +35,9 @@
                 :key="key"
                 cols="4"
               >
-                <div class="text-lg-h6 white--text mb-8">{{ title }}</div>
+                <div class="text-lg-h6 white--text mb-8 font-weight-bold">
+                  {{ title }}
+                </div>
                 <div
                   class="d-flex flex-column justify-start align-start links-footer"
                 >
@@ -53,8 +55,8 @@
             </v-row>
           </v-col>
         </v-row>
-        <div class="copy white--text mt-16 pt-9">
-          <div class="text-body-1 text-opacity-60">
+        <div class="copy white--text mt-lg-16 mt-md-16 mt-5 pt-9">
+          <div class="text-body-1 text-center text-opacity-60">
             BikeWeb 2012 - Todos os direitos reservados.
           </div>
           <div class="d-flex justify-center">
@@ -135,6 +137,11 @@ export default {
 <style>
 .mt-150 {
   margin-top: 150px;
+}
+@media (max-width: 960px) {
+  .mt-150 {
+    margin-top: 36px;
+  }
 }
 .text-opacity-60 {
   opacity: 0.6 !important;
