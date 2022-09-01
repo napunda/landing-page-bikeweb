@@ -69,6 +69,7 @@ export default {
 .portfolio {
   display: flex;
   gap: 30px;
+  flex-wrap:wrap;
 }
 .portfolio .item {
 width:50%!important;
