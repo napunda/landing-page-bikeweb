@@ -52,9 +52,9 @@ export default {
         { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
       ],
       images: [
-        { title: "Corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
         { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
+        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Capacete", url: "/img/portfolio/bike-helmet.jpg" },
         { title: "Catraca", url: "/img/portfolio/bike-wheel.jpg" },
         { title: "Trilha", url: "/img/portfolio/bike-downhill.png" },
