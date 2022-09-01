@@ -68,8 +68,13 @@ export default {
 <style>
 .portfolio {
   display: flex;
-  flex-wrap: wrap-reverse;
   gap: 30px;
+}
+.portfolio .item {
+width:100%;
+}
+.portfolio .item:nth-child(1) {
+width:50%;
 }
 .item {
   height: 330px;
