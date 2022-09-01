@@ -71,10 +71,10 @@ export default {
   gap: 30px;
 }
 .portfolio .item {
-width:100%;
+width:50%!important;
 }
 .portfolio .item:nth-child(1) {
-width:50%;
+width:100%;
 }
 .item {
   height: 330px;
