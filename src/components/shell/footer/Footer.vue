@@ -57,7 +57,7 @@
         </v-row>
         <div class="copy white--text mt-lg-16 mt-md-16 mt-5 pt-9">
           <div class="text-body-1 text-center text-opacity-60">
-            BikeWeb 2012 - Todos os direitos reservados.
+            BikeWeb 2022 - Todos os direitos reservados.
           </div>
           <div class="d-flex justify-center">
             <v-btn
@@ -122,7 +122,7 @@ export default {
         ],
       },
       {
-        title: "MENU RÁPIDO",
+        title: "MENU",
         menus: [
           { title: "Topo", link: "#top" },
           { title: "Marcas", link: "#brands" },
