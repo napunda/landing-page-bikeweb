@@ -18,7 +18,7 @@
           href="javascript:void(0);"
           @click="
             images = images;
-            index = 0;
+            index = key;
           "
         >
           <img width="100%" :src="item.url" v-if="item.url" class="d-block" />
