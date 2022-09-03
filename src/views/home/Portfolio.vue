@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="portfolio mt-9">
-      <div class="item" v-for="(item, key) in thumbs" :key="key">
+      <div class="item-thumb" v-for="(item, key) in thumbs" :key="key">
         <a
           class="text-decoration-none"
           href="javascript:void(0);"
@@ -47,14 +47,14 @@ export default {
   data() {
     return {
       thumbs: [
+        { title: "Corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
         { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
-        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
       ],
       images: [
+        { title: "Corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Praia", url: "/img/portfolio/bike-beach.jpg" },
         { title: "Estrada", url: "/img/portfolio/bike-road.jpg" },
-        { title: "corrida", url: "/img/portfolio/bike-roadway.jpg" },
         { title: "Capacete", url: "/img/portfolio/bike-helmet.jpg" },
         { title: "Catraca", url: "/img/portfolio/bike-wheel.jpg" },
         { title: "Trilha", url: "/img/portfolio/bike-downhill.png" },
@@ -68,20 +68,27 @@ export default {
 <style>
 .portfolio {
   display: flex;
-  gap: 30px;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
-.portfolio .item {
-width:50%!important;
+.portfolio .item-thumb {
+  width: calc((100% - 20px) / 2);
 }
-.portfolio .item:nth-child(1) {
-width:100%;
+@media (max-width: 960px) {
+  .portfolio .item-thumb {
+    width: 100%;
+  }
 }
-.item {
+.portfolio .item-thumb:nth-child(1) {
+  width: 100% !important;
+}
+.item-thumb {
   height: 330px;
-  flex: 1 1 500px;
+  /* flex: 1 1 500px; */
 }
-.item img {
+.item-thumb img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
